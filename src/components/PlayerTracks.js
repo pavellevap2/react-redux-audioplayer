@@ -7,7 +7,9 @@ export default class PlayerTracks extends React.Component {
 
     return (
       <React.Fragment>
-        {songs.map((x, i) => <TrackContainer track={x} key={i} index={i} />)}
+        {songs.map((track, i) => (
+          <TrackContainer track={track} key={i} index={i} />
+        ))}
       </React.Fragment>
     )
   }
