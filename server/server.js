@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const Cors = require('cors')
 
 const app = Express()
-const db = require('./track')
+const tracksDB = require('./tracks')
 
 app.set('port', process.env.PORT || 8080)
 
@@ -17,7 +17,7 @@ app.use(
 app.use(bodyParser.json())
 
 app.get('/api/tracks', (req, res) => {
-  res.send(db)
+  res.send(tracksDB)
 })
 
 app.listen(app.get('port'), () => {
