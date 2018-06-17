@@ -1,0 +1,5 @@
+export { default as track1 } from './track1.wav'
+export { default as track2 } from './track2.mp3'
+export { default as track3 } from './track3.mp3'
+export { default as track4 } from './track4.mp3'
+export { default as track5 } from './track5.mp3'
