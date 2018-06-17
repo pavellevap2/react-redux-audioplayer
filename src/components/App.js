@@ -34,7 +34,7 @@ injectGlobal`
 
 export default class App extends React.Component {
   componentDidMount() {
-    this.props.getSongs()
+    this.props.getTracks()
   }
 
   render() {

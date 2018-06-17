@@ -1,4 +1,4 @@
-const getTracks = () =>
+const fetchTracks = () =>
   fetch('http://localhost:8080/api/tracks', {
     method: 'GET',
     credentials: 'same-origin',
@@ -8,4 +8,4 @@ const getTracks = () =>
     },
   }).then(data => data.json())
 
-export default getTracks
+export default fetchTracks

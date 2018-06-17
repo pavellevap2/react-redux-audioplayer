@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import PlayIcon from '@material-ui/icons/PlayCircleFilled'
 import PauseIcon from '@material-ui/icons/PauseCircleFilled'
 import Repeat from '@material-ui/icons/Repeat'

@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 const Track = ({ track, index, selectSong }) => (
   <React.Fragment>
-    <div onClick={() => selectSong(index)}>
-      {`${track.band} - ${track.name}`}{' '}
-    </div>
+    <div>{`${track.band} - ${track.name}`} </div>
   </React.Fragment>
 )
 

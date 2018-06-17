@@ -1,14 +1,14 @@
-import { call, put, select, takeEvery } from 'redux-saga/effects'
-import getTracks from './manger'
-import { GET_SONGS, getSongsRequest } from './actions'
+import { call, put, takeEvery } from 'redux-saga/effects'
+import fetchTracks from './manger'
+import { GET_TRACKS, getTracksRequest } from './actions'
 
 const getTracksWorker = function*() {
-  const tracks = yield call(getTracks)
-  yield put(getSongsRequest(tracks))
+  const tracks = yield call(fetchTracks)
+  yield put(getTracksRequest(tracks))
 }
 
 const getTracksWatcher = function*() {
-  yield takeEvery(GET_SONGS, getTracksWorker)
+  yield takeEvery(GET_TRACKS, getTracksWorker)
 }
 
 export default function*() {
