@@ -1,2 +1,2 @@
 export { default as App } from './App'
-export { default as PlayerSongs } from './PlayerSongs'
+export { default as PlayerTracks } from './PlayerTracks'

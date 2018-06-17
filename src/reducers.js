@@ -6,32 +6,41 @@ import * as tracks from './assets/audios'
 
 const songs = handleActions(
   {
-    [SELECT_SONG]: (state, { payload }) => payload,
+    [SELECT_SONG]: (state, { payload }) =>
+      state.map(
+        (x, i) =>
+          i === payload ? { ...x, active: true } : { ...x, active: false },
+      ),
   },
   [
     {
-      name: 'first track',
-      src: tracks.track1,
+      name: 'Anti autotune rap',
+      band: 'Unknown',
+      url: tracks.track1,
       active: true,
     },
     {
-      name: 'first track',
-      src: tracks.track2,
+      name: 'Badly sung la marseillaise',
+      band: 'French Anthem',
+      url: tracks.track2,
       active: false,
     },
     {
-      name: 'second track',
-      src: tracks.track3,
+      name: 'Could be Acapella',
+      band: 'Jenny Mayhem and Jesse Taylor',
+      url: tracks.track3,
       active: false,
     },
     {
-      name: 'third track',
-      src: tracks.track4,
+      name: 'Live concert male',
+      band: 'Vox devotional',
+      url: tracks.track4,
       active: false,
     },
     {
-      name: 'fifth track',
-      src: tracks.track5,
+      name: 'Lofi hindi fem sung',
+      band: 'Deewana',
+      url: tracks.track5,
       active: false,
     },
   ],

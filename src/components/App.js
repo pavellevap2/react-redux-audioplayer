@@ -1,10 +1,10 @@
 import React from 'react'
-import { PlayerSongsContainer, PlayerContainer } from '../containers'
+import { PlayerTracksContainer, PlayerContainer } from '../containers'
 
 const App = () => (
   <React.Fragment>
     <PlayerContainer />
-    <PlayerSongsContainer />
+    <PlayerTracksContainer />
   </React.Fragment>
 )
 
