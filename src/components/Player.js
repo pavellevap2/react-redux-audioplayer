@@ -2,7 +2,13 @@ import React from 'react'
 
 export default class Player extends React.Component {
   componentDidUpdate() {
-    const { pause, volume, getTreckCurrentTime, getTreckDuration } = this.props
+    const {
+      pause,
+      volume,
+      getTreckCurrentTime,
+      getTreckDuration,
+      selectedTime,
+    } = this.props
 
     getTreckCurrentTime(this.audio.currentTime)
     getTreckDuration(this.audio.duration)
@@ -13,6 +19,9 @@ export default class Player extends React.Component {
       this.audio.pause()
     }
 
+    if (selectedTime && this.audio.duration) {
+      this.audio.currentTime = (this.audio.duration * selectedTime) / 100
+    }
     this.audio.volume = volume
   }
 

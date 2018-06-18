@@ -39,7 +39,7 @@ class PlayerPanel extends React.Component {
     this.timer = null
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.timer = setInterval(this.progress, 1000)
   }
 
@@ -57,6 +57,15 @@ class PlayerPanel extends React.Component {
     } else {
       this.setState({ completed: progress })
     }
+  }
+
+  handleTrackClick = e => {
+    const mouseX = e.pageX - e.currentTarget.getBoundingClientRect().left
+    const width = e.currentTarget.offsetWidth
+
+    const percent = (mouseX * 100) / width
+    this.props.selectTime(percent)
+    this.setState({ completed: percent })
   }
 
   render() {
@@ -88,6 +97,7 @@ class PlayerPanel extends React.Component {
           className={classes.progress}
           variant="determinate"
           value={completed}
+          onClick={this.handleTrackClick}
         />
         <SliderContainer>
           <Slider

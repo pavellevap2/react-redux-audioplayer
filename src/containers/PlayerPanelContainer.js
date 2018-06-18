@@ -6,6 +6,7 @@ import {
   selectPause,
   selectPrevTreck,
   changeVolume,
+  selectTime,
 } from '../actions'
 import {
   getPause,
@@ -26,6 +27,7 @@ const mapDispatchToProps = {
   selectPrevTreck,
   selectPause,
   changeVolume,
+  selectTime,
 }
 
 export default connect(

@@ -10,6 +10,7 @@ import {
   GET_TRECK_DURRATION,
   GET_TRECK_CURRENT_TIME,
   SELECT_CURRENT_TRECK,
+  SELECT_TIME,
 } from '../actions'
 
 const pause = handleActions(
@@ -50,9 +51,23 @@ const currentTime = handleAction(
   0,
 )
 
+export const selectedTime = handleActions(
+  {
+    [SELECT_TIME]: R.pipe(
+      R.nthArg(1),
+      R.prop('payload'),
+    ),
+    [SELECT_NEXT_TRECK]: R.always(0),
+    [SELECT_PREV_TRECK]: R.always(0),
+    [SELECT_TRECK]: R.always(0),
+  },
+  0,
+)
+
 export default combineReducers({
   pause,
   volume,
   duration,
   currentTime,
+  selectedTime,
 })

@@ -33,3 +33,5 @@ export const getVolume = R.path(['panel', 'volume'])
 export const getTreckCurrentTime = R.path(['panel', 'currentTime'])
 
 export const getTreckDuration = R.path(['panel', 'duration'])
+
+export const getSelectedTime = R.path(['panel', 'selectedTime'])
