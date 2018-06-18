@@ -8,16 +8,16 @@ import PrevArrow from '@material-ui/icons/FastRewind'
 import Grid from '@material-ui/core/Grid'
 import Icon from '@material-ui/core/IconButton'
 
-const PlayerPanel = ({}) => (
+const PlayerPanel = ({ selectNextTrack, pause, selectPause }) => (
   <Grid container>
     <Grid item>
       <Icon>
         <PrevArrow color="error" />
       </Icon>
-      <Icon>
-        <PlayIcon />
+      <Icon onClick={() => selectPause()}>
+        {!pause ? <PlayIcon /> : <PauseIcon />}
       </Icon>
-      <Icon>
+      <Icon onClick={() => selectNextTrack()}>
         <NextArrow color="error" />
       </Icon>
     </Grid>

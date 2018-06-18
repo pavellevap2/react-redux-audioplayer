@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeEvery, select } from 'redux-saga/effects'
 import fetchTracks from './manger'
 import { GET_TRACKS, getTracksRequest } from './actions'
 

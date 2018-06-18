@@ -6,6 +6,8 @@ const fetchTracks = () =>
       'Content-Type': 'JSON',
       'Access-Control-Allow-Origin': 'http://localhost',
     },
-  }).then(data => data.json())
+  })
+    .then(data => data.json())
+    .then(data => data.map((x, index) => ({ ...x, index })))
 
 export default fetchTracks
