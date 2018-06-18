@@ -27,3 +27,5 @@ export const getCurrentSong = state => {
 }
 
 export const getPause = R.path(['panel', 'pause'])
+
+export const getVolume = R.path(['panel', 'volume'])

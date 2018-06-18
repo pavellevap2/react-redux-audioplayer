@@ -6,6 +6,7 @@ import {
   SELECT_TRECK,
   SELECT_NEXT_TRECK,
   SELECT_PREV_TRECK,
+  CHANGE_VOLUME,
 } from '../actions'
 
 const pause = handleActions(
@@ -18,6 +19,16 @@ const pause = handleActions(
   false,
 )
 
+const volume = handleAction(
+  CHANGE_VOLUME,
+  R.pipe(
+    R.nthArg(1),
+    R.prop('payload'),
+  ),
+  0.5,
+)
+
 export default combineReducers({
   pause,
+  volume,
 })

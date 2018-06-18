@@ -27,6 +27,8 @@ const PlayerPanel = ({
   pause,
   selectPause,
   classes,
+  volume,
+  changeVolume,
 }) => (
   <PanelContainer>
     <Icon onClick={() => selectPrevTreck()}>
@@ -39,7 +41,13 @@ const PlayerPanel = ({
       <NextArrow color="error" />
     </Icon>
     <SliderContainer>
-      <Slider />
+      <Slider
+        value={volume}
+        min={0}
+        max={1}
+        step={0.1}
+        onChange={(e, value) => changeVolume(value)}
+      />
     </SliderContainer>
   </PanelContainer>
 )
