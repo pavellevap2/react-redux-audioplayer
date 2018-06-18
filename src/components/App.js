@@ -40,7 +40,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Grid container justify="center" alignItems="center">
-        <Grid item>
+        <Grid item lg={8}>
           <PlayerPanelContainer />
           <PlayerContainer />
           <PlayerTracksContainer />

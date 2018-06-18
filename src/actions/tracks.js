@@ -14,6 +14,8 @@ export const GET_TRACKS_FAILURE = `${DOMAIN}GET_TRACKS_FAILURE`
 
 export const SELECT_TRECK = `${DOMAIN}SELECT_TRECK`
 
+export const SELECT_CURRENT_TRECK = `${DOMAIN}SELECT_CURRENT_TRECK`
+
 export const SELECT_NEXT_TRECK = `${DOMAIN}SELECT_NEXT_TRECK`
 
 export const SELECT_PREV_TRECK = `${DOMAIN}SELECT_PREV_TRECK`
@@ -29,6 +31,8 @@ export const getTracksSuccess = createAction(GET_TRACKS_SUCCESS)
 export const getTracksFailure = createAction(GET_TRACKS_FAILURE)
 
 export const selectTrack = createAction(SELECT_TRECK)
+
+export const selectCurrentTreck = createAction(SELECT_CURRENT_TRECK)
 
 export const selectNextTrack = createAction(SELECT_NEXT_TRECK)
 

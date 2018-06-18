@@ -7,11 +7,18 @@ import {
   selectPrevTreck,
   changeVolume,
 } from '../actions'
-import { getPause, getVolume } from '../selectors'
+import {
+  getPause,
+  getVolume,
+  getTreckDuration,
+  getTreckCurrentTime,
+} from '../selectors'
 
 const mapStateToProps = R.applySpec({
   pause: getPause,
   volume: getVolume,
+  duration: getTreckDuration,
+  currentTime: getTreckCurrentTime,
 })
 
 const mapDispatchToProps = {

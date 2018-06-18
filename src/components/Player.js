@@ -1,12 +1,11 @@
 import React from 'react'
 
 export default class Player extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidUpdate() {
-    const { pause, volume } = this.props
+    const { pause, volume, getTreckCurrentTime, getTreckDuration } = this.props
+
+    getTreckCurrentTime(this.audio.currentTime)
+    getTreckDuration(this.audio.duration)
 
     if (pause) {
       this.audio.play()
