@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import PlayIcon from '@material-ui/icons/PlayCircleFilled'
-import PauseIcon from '@material-ui/icons/PauseCircleFilled'
-import Icon from '@material-ui/core/IconButton'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 const TrackContainer = styled.div`
@@ -42,7 +39,7 @@ export default class Track extends React.Component {
   }
 
   render() {
-    const { track, index, selectTrack, currentTrack, pause } = this.props
+    const { track, index, currentTrack } = this.props
     const isActive = currentTrack.index === index ? true : false
     const duration = Math.round(this.duration)
 

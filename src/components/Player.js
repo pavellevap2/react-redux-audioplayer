@@ -17,7 +17,7 @@ export default class Player extends React.Component {
   }
 
   render() {
-    const { currentSong, volume } = this.props
+    const { currentSong } = this.props
 
     return (
       <audio

@@ -2,15 +2,12 @@ import React from 'react'
 import Slider from '@material-ui/lab/Slider'
 import PlayIcon from '@material-ui/icons/PlayCircleFilled'
 import PauseIcon from '@material-ui/icons/PauseCircleFilled'
-import Repeat from '@material-ui/icons/Repeat'
-import RepeatOne from '@material-ui/icons/RepeatOne'
 import NextArrow from '@material-ui/icons/FastForward'
 import PrevArrow from '@material-ui/icons/FastRewind'
 import Icon from '@material-ui/core/IconButton'
 import styled from 'styled-components'
 import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
-import { renderComponent } from 'recompose'
 
 const PanelContainer = styled.div`
   display: flex;
@@ -71,8 +68,6 @@ class PlayerPanel extends React.Component {
       classes,
       volume,
       changeVolume,
-      duration,
-      currentTime,
     } = this.props
 
     const { completed } = this.state
