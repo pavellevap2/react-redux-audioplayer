@@ -8,6 +8,6 @@ const fetchTracks = () =>
     },
   })
     .then(data => data.json())
-    .then(data => data.map((x, index) => ({ ...x, index })))
+    .then(data => data.map((x, index) => ({ ...x, index, active: false })))
 
 export default fetchTracks

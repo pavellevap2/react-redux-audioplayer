@@ -7,6 +7,7 @@ import {
   GET_TRACKS_FAILURE,
   SELECT_NEXT_TRECK,
   SELECT_PREV_TRECK,
+  SELECT_TRECK,
 } from '../actions'
 
 const tracks = handleAction(
@@ -31,6 +32,10 @@ const treckNumber = handleActions(
   {
     [SELECT_NEXT_TRECK]: R.inc(),
     [SELECT_PREV_TRECK]: R.dec(),
+    [SELECT_TRECK]: R.pipe(
+      R.nthArg(1),
+      R.prop('payload'),
+    ),
   },
   0,
 )
