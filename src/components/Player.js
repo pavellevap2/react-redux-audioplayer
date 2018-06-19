@@ -26,7 +26,7 @@ export default class Player extends React.Component {
   }
 
   render() {
-    const { currentSong } = this.props
+    const { currentTreck } = this.props
 
     return (
       <audio
@@ -35,7 +35,7 @@ export default class Player extends React.Component {
         }}
         autoPlay
         preload="auto"
-        src={currentSong.url}
+        src={currentTreck.url}
       />
     )
   }

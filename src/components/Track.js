@@ -45,7 +45,7 @@ export default class Track extends React.Component {
 
     return (
       <TrackContainer active={isActive} onClick={this._selectTrack}>
-        <p>{`${track.band} - ${track.name}`}</p>
+        <p>{track.info}</p>
         <audio
           ref={audio => {
             this.audio = audio

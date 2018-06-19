@@ -5,6 +5,7 @@ import {
   PlayerTracksContainer,
   PlayerContainer,
   PlayerPanelContainer,
+  SearchInputContainer,
 } from '../containers'
 
 injectGlobal`
@@ -34,7 +35,7 @@ injectGlobal`
 
 export default class App extends React.Component {
   componentDidMount() {
-    this.props.getTracks()
+    this.props.getTrecks()
   }
 
   render() {
@@ -42,6 +43,7 @@ export default class App extends React.Component {
       <Grid container justify="center" alignItems="center">
         <Grid item lg={8}>
           <PlayerPanelContainer />
+          <SearchInputContainer />
           <PlayerContainer />
           <PlayerTracksContainer />
         </Grid>

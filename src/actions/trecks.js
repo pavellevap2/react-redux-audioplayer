@@ -4,13 +4,13 @@ const DOMAIN = 'tracks/'
 
 // Action Types
 
-export const GET_TRACKS = `${DOMAIN}GET_TRACKS`
+export const GET_TRECKS = `${DOMAIN}GET_TRECKS`
 
-export const GET_TRACKS_REQUEST = `${DOMAIN}GET_TRACKS_REQUEST`
+export const GET_TRECKS_REQUEST = `${DOMAIN}GET_TRECKS_REQUEST`
 
-export const GET_TRACKS_SUCCESS = `${DOMAIN}GET_TRACKS_SUCCESS`
+export const GET_TRECKS_SUCCESS = `${DOMAIN}GET_TRECKS_SUCCESS`
 
-export const GET_TRACKS_FAILURE = `${DOMAIN}GET_TRACKS_FAILURE`
+export const GET_TRECKS_FAILURE = `${DOMAIN}GET_TRECKS_FAILURE`
 
 export const SELECT_TRECK = `${DOMAIN}SELECT_TRECK`
 
@@ -22,13 +22,13 @@ export const SELECT_PREV_TRECK = `${DOMAIN}SELECT_PREV_TRECK`
 
 // Action Creators
 
-export const getTracks = createAction(GET_TRACKS)
+export const getTrecks = createAction(GET_TRECKS)
 
-export const getTracksRequest = createAction(GET_TRACKS_REQUEST)
+export const getTrecksRequest = createAction(GET_TRECKS_REQUEST)
 
-export const getTracksSuccess = createAction(GET_TRACKS_SUCCESS)
+export const getTrecksSuccess = createAction(GET_TRECKS_SUCCESS)
 
-export const getTracksFailure = createAction(GET_TRACKS_FAILURE)
+export const getTrecksFailure = createAction(GET_TRECKS_FAILURE)
 
 export const selectTrack = createAction(SELECT_TRECK)
 

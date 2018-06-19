@@ -2,15 +2,15 @@ import * as R from 'ramda'
 import { connect } from 'react-redux'
 import { getTreckCurrentTime, getTreckDuration } from '../actions'
 import {
-  getCurrentSong,
   getPause,
   getVolume,
   getSelectedTime,
+  getCurrentTreck,
 } from '../selectors'
 import Player from '../components/Player'
 
 const mapStateToProps = R.applySpec({
-  currentSong: getCurrentSong,
+  currentTreck: getCurrentTreck,
   pause: getPause,
   volume: getVolume,
   selectedTime: getSelectedTime,

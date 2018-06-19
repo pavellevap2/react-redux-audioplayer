@@ -2,16 +2,16 @@ import * as R from 'ramda'
 import { handleActions, handleAction } from 'redux-actions'
 import { combineReducers } from 'redux'
 import {
-  GET_TRACKS_REQUEST,
-  GET_TRACKS_SUCCESS,
-  GET_TRACKS_FAILURE,
   SELECT_NEXT_TRECK,
   SELECT_PREV_TRECK,
   SELECT_TRECK,
+  GET_TRECKS_REQUEST,
+  GET_TRECKS_SUCCESS,
+  GET_TRECKS_FAILURE,
 } from '../actions'
 
-const tracks = handleAction(
-  GET_TRACKS_REQUEST,
+const trecks = handleAction(
+  GET_TRECKS_REQUEST,
   R.pipe(
     R.nthArg(1),
     R.prop('payload'),
@@ -21,9 +21,9 @@ const tracks = handleAction(
 
 const isFetching = handleActions(
   {
-    [GET_TRACKS_REQUEST]: R.T,
-    [GET_TRACKS_SUCCESS]: R.F,
-    [GET_TRACKS_FAILURE]: R.F,
+    [GET_TRECKS_REQUEST]: R.T,
+    [GET_TRECKS_SUCCESS]: R.F,
+    [GET_TRECKS_FAILURE]: R.F,
   },
   false,
 )
@@ -40,4 +40,4 @@ const treckNumber = handleActions(
   0,
 )
 
-export default combineReducers({ tracks, isFetching, treckNumber })
+export default combineReducers({ trecks, isFetching, treckNumber })

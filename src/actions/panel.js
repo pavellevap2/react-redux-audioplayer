@@ -14,6 +14,8 @@ export const GET_TRECK_CURRENT_TIME = `${DOMAIN}GET_TRECK_CURRENT_TIME`
 
 export const SELECT_TIME = `${DOMAIN}SELECT_TIME`
 
+export const UPDATE_SEARCH_INPUT = `${DOMAIN}UPDATE_SEARCH_INPUT`
+
 // Action Creators
 
 export const selectPause = createAction(SELECT_PAUSE)
@@ -25,3 +27,5 @@ export const getTreckDuration = createAction(GET_TRECK_DURRATION)
 export const getTreckCurrentTime = createAction(GET_TRECK_CURRENT_TIME)
 
 export const selectTime = createAction(SELECT_TIME)
+
+export const updateSearchInput = createAction(UPDATE_SEARCH_INPUT)

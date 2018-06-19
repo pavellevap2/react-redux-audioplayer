@@ -11,6 +11,7 @@ import {
   GET_TRECK_CURRENT_TIME,
   SELECT_CURRENT_TRECK,
   SELECT_TIME,
+  UPDATE_SEARCH_INPUT,
 } from '../actions'
 
 const pause = handleActions(
@@ -64,10 +65,20 @@ export const selectedTime = handleActions(
   0,
 )
 
+const searchInput = handleAction(
+  UPDATE_SEARCH_INPUT,
+  R.pipe(
+    R.nthArg(1),
+    R.prop('payload'),
+  ),
+  '',
+)
+
 export default combineReducers({
   pause,
   volume,
   duration,
   currentTime,
   selectedTime,
+  searchInput,
 })

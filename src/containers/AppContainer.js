@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import { getTracks } from '../actions'
+import { getTrecks } from '../actions'
 import App from '../components/App'
 
 const mapDisptachToProps = {
-  getTracks,
+  getTrecks,
 }
 
 export default connect(

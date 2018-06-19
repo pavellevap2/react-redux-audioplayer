@@ -11,10 +11,10 @@ import LinearProgress from '@material-ui/core/LinearProgress'
 
 const PanelContainer = styled.div`
   display: flex;
-  margin-top: 3em;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 2em;
   align-items: center;
   border: 1px solid blue;
 `

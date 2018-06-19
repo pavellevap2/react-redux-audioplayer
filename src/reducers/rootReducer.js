@@ -1,8 +1,8 @@
-import tracks from './tracks'
+import trecks from './trecks'
 import panel from './panel'
 import { combineReducers } from 'redux'
 
 export default combineReducers({
-  tracks,
+  trecks,
   panel,
 })

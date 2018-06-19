@@ -1,10 +1,10 @@
 import * as R from 'ramda'
 import { connect } from 'react-redux'
-import { getSongs } from '../selectors'
+import { getTrecks } from '../selectors'
 import PlayerTracks from '../components/PlayerTracks'
 
 const mapStateToProps = R.applySpec({
-  songs: getSongs,
+  trecks: getTrecks,
 })
 
 export default connect(mapStateToProps)(PlayerTracks)
