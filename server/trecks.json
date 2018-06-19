@@ -2,31 +2,31 @@
   {
     "name": "'Anti autotune rap'",
     "band": "'Unknown'",
-    "url": "/tracks/track1.wav",
+    "url": "/trecks/track1.wav",
     "active": true
   },
   {
     "name": "'Badly sung la marseillaise",
     "band": "French Anthem",
-    "url": "/tracks/track2.mp3",
+    "url": "/trecks/track2.mp3",
     "active": false
   },
   {
     "name": "Could be Acapella'",
     "band": "Jenny Mayhem and Jesse Taylo",
-    "url": "/tracks/track3.mp3",
+    "url": "/trecks/track3.mp3",
     "active": false
   },
   {
     "name": "Live concert male'",
     "band": "Vox devotional",
-    "url": "/tracks/track4.mp3",
+    "url": "/trecks/track4.mp3",
     "active": false
   },
   {
     "name": "Lofi hindi fem sung'",
     "band": "Deewana",
-    "url": "/tracks/track5.mp3",
+    "url": "/trecks/track5.mp3",
     "active": false
   }
 ]

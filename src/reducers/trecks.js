@@ -11,7 +11,7 @@ import {
 } from '../actions'
 
 const trecks = handleAction(
-  GET_TRECKS_REQUEST,
+  GET_TRECKS_SUCCESS,
   R.pipe(
     R.nthArg(1),
     R.prop('payload'),

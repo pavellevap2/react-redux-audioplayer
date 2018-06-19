@@ -7,7 +7,7 @@ import {
   getSelectedTime,
   getCurrentTreck,
 } from '../selectors'
-import Player from '../components/Player'
+import { Player } from '../components'
 
 const mapStateToProps = R.applySpec({
   currentTreck: getCurrentTreck,

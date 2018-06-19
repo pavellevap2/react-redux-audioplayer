@@ -1,16 +1,16 @@
 import * as R from 'ramda'
-import Track from '../components/Track'
+import { Treck } from '../components'
 import { connect } from 'react-redux'
-import { selectTrack, selectCurrentTreck, selectPause } from '../actions'
+import { selectTreck, selectCurrentTreck, selectPause } from '../actions'
 import { getPause, getCurrentTreck } from '../selectors'
 
 const mapStateToProps = R.applySpec({
   pause: getPause,
-  currentTrack: getCurrentTreck,
+  currentTreck: getCurrentTreck,
 })
 
 const mapDispatchToProps = {
-  selectTrack,
+  selectTreck,
   selectCurrentTreck,
   selectPause,
 }
@@ -18,4 +18,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Track)
+)(Treck)

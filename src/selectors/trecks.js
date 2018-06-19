@@ -7,6 +7,8 @@ export const getTrecks = R.converge(filterTrecks, [
   getSearchInput,
 ])
 
+export const getPreloader = R.path(['trecks', 'isFetching'])
+
 const getTrecksLength = R.pipe(
   getTrecks,
   R.length,

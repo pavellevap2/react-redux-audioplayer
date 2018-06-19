@@ -3,9 +3,9 @@ import fetchTracks from './manger'
 import { getTrecksSuccess, getTrecksRequest, GET_TRECKS } from './actions'
 
 const getTracksWorker = function*() {
-  yield put(getTrecksSuccess())
+  yield put(getTrecksRequest())
   const tracks = yield call(fetchTracks)
-  yield put(getTrecksRequest(tracks))
+  yield put(getTrecksSuccess(tracks))
 }
 
 const getTracksWatcher = function*() {

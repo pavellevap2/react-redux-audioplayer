@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-const TrackContainer = styled.div`
+const TreckContainer = styled.div`
   background: ${({ active }) => active && 'red'};
   cursor: pointer;
   display: flex;
@@ -13,38 +13,38 @@ const TrackContainer = styled.div`
   padding: 0.2em;
 `
 
-export default class Track extends React.Component {
+export default class Treck extends React.Component {
   componentWillReceiveProps() {
     this.duration = this.audio.duration
   }
 
-  _selectTrack = () => {
+  _selectTreck = () => {
     const {
       index,
-      selectTrack,
-      currentTrack,
+      selectTreck,
+      currentTreck,
       selectCurrentTreck,
       pause,
       selectPause,
     } = this.props
-    const isActive = currentTrack.index === index ? true : false
+    const isActive = currentTreck.index === index ? true : false
 
     if (isActive && !pause) {
       selectCurrentTreck()
     } else if (isActive && pause) {
       selectPause()
     } else {
-      selectTrack(index)
+      selectTreck(index)
     }
   }
 
   render() {
-    const { track, index, currentTrack } = this.props
-    const isActive = currentTrack.index === index ? true : false
+    const { track, index, currentTreck } = this.props
+    const isActive = currentTreck.index === index ? true : false
     const duration = Math.round(this.duration)
 
     return (
-      <TrackContainer active={isActive} onClick={this._selectTrack}>
+      <TreckContainer active={isActive} onClick={this._selectTreck}>
         <p>{track.info}</p>
         <audio
           ref={audio => {
@@ -53,7 +53,7 @@ export default class Track extends React.Component {
           src={track.url}
         />
         <span>{duration ? duration : <CircularProgress size={25} />}</span>
-      </TrackContainer>
+      </TreckContainer>
     )
   }
 }

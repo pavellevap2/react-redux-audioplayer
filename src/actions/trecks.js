@@ -30,10 +30,10 @@ export const getTrecksSuccess = createAction(GET_TRECKS_SUCCESS)
 
 export const getTrecksFailure = createAction(GET_TRECKS_FAILURE)
 
-export const selectTrack = createAction(SELECT_TRECK)
+export const selectTreck = createAction(SELECT_TRECK)
 
 export const selectCurrentTreck = createAction(SELECT_CURRENT_TRECK)
 
-export const selectNextTrack = createAction(SELECT_NEXT_TRECK)
+export const selectNextTreck = createAction(SELECT_NEXT_TRECK)
 
 export const selectPrevTreck = createAction(SELECT_PREV_TRECK)

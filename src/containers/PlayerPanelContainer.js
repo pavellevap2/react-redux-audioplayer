@@ -1,8 +1,8 @@
 import * as R from 'ramda'
 import { connect } from 'react-redux'
-import PlayerPanel from '../components/PlayerPanel'
+import { PlayerPanel } from '../components'
 import {
-  selectNextTrack,
+  selectNextTreck,
   selectPause,
   selectPrevTreck,
   changeVolume,
@@ -23,7 +23,7 @@ const mapStateToProps = R.applySpec({
 })
 
 const mapDispatchToProps = {
-  selectNextTrack,
+  selectNextTreck,
   selectPrevTreck,
   selectPause,
   changeVolume,

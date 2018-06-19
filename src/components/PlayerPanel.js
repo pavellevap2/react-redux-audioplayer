@@ -70,7 +70,7 @@ class PlayerPanel extends React.Component {
 
   render() {
     const {
-      selectNextTrack,
+      selectNextTreck,
       selectPrevTreck,
       pause,
       selectPause,
@@ -89,7 +89,7 @@ class PlayerPanel extends React.Component {
           <Icon onClick={() => selectPause()}>
             {!pause ? <PlayIcon /> : <PauseIcon />}
           </Icon>
-          <Icon onClick={() => selectNextTrack()}>
+          <Icon onClick={() => selectNextTreck()}>
             <NextArrow color="error" />
           </Icon>
         </div>
