@@ -1,2 +1,6 @@
 export { default as App } from './App'
-export { default as PlayerTracks } from './PlayerTracks'
+export { default as PlayerTrecks } from './PlayerTrecks'
+export { default as Player } from './Player'
+export { default as PlayerPanel } from './PlayerPanel'
+export { default as SearchInput } from './SearchInput'
+export { default as Treck } from './Treck'
