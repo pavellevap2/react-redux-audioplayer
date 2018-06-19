@@ -1,2 +1,2 @@
 export * from './panel'
-export * from './trecks'
+export * from './tracks'

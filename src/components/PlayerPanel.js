@@ -70,8 +70,8 @@ class PlayerPanel extends React.Component {
 
   render() {
     const {
-      selectNextTreck,
-      selectPrevTreck,
+      selectNextTrack,
+      selectPrevTrack,
       pause,
       selectPause,
       classes,
@@ -83,13 +83,13 @@ class PlayerPanel extends React.Component {
     return (
       <PanelContainer>
         <div>
-          <Icon onClick={() => selectPrevTreck()}>
+          <Icon onClick={() => selectPrevTrack()}>
             <PrevArrow color="error" />
           </Icon>
           <Icon onClick={() => selectPause()}>
             {!pause ? <PlayIcon /> : <PauseIcon />}
           </Icon>
-          <Icon onClick={() => selectNextTreck()}>
+          <Icon onClick={() => selectNextTrack()}>
             <NextArrow color="error" />
           </Icon>
         </div>

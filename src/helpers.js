@@ -1,4 +1,4 @@
-const filterTrecks = (trecks, inputTreck) =>
-  trecks.filter(cityName => new RegExp(inputTreck).test(cityName.info))
+const filterTracks = (tracks, inputTrack) =>
+  tracks.filter(cityName => new RegExp(inputTrack).test(cityName.info))
 
-export default filterTrecks
+export default filterTracks

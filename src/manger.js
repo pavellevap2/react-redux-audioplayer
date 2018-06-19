@@ -1,5 +1,5 @@
 const fetchTracks = () =>
-  fetch('http://localhost:8080/api/trecks', {
+  fetch('http://localhost:8080/api/tracks', {
     method: 'GET',
     credentials: 'same-origin',
     headers: {

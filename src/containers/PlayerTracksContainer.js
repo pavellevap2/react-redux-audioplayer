@@ -1,11 +1,11 @@
 import * as R from 'ramda'
 import { connect } from 'react-redux'
-import { getTrecks, getPreloader } from '../selectors'
-import { PlayerTrecks } from '../components'
+import { getTracks, getPreloader } from '../selectors'
+import { PlayerTracks } from '../components'
 
 const mapStateToProps = R.applySpec({
-  trecks: getTrecks,
+  tracks: getTracks,
   preloader: getPreloader,
 })
 
-export default connect(mapStateToProps)(PlayerTrecks)
+export default connect(mapStateToProps)(PlayerTracks)

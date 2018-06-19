@@ -1,15 +1,15 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 import fetchTracks from './manger'
-import { getTrecksSuccess, getTrecksRequest, GET_TRECKS } from './actions'
+import { getTracksSuccess, getTracksRequest, GET_TRACKS } from './actions'
 
 const getTracksWorker = function*() {
-  yield put(getTrecksRequest())
+  yield put(getTracksRequest())
   const tracks = yield call(fetchTracks)
-  yield put(getTrecksSuccess(tracks))
+  yield put(getTracksSuccess(tracks))
 }
 
 const getTracksWatcher = function*() {
-  yield takeEvery(GET_TRECKS, getTracksWorker)
+  yield takeEvery(GET_TRACKS, getTracksWorker)
 }
 
 export default function*() {

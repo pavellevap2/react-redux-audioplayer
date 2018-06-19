@@ -35,7 +35,7 @@ injectGlobal`
 
 export default class App extends React.Component {
   componentDidMount() {
-    this.props.getTrecks()
+    this.props.getTracks()
   }
 
   render() {

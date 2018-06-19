@@ -5,13 +5,13 @@ export default class Player extends React.Component {
     const {
       pause,
       volume,
-      getTreckCurrentTime,
-      getTreckDuration,
+      getTrackCurrentTime,
+      getTrackDuration,
       selectedTime,
     } = this.props
 
-    getTreckCurrentTime(this.audio.currentTime)
-    getTreckDuration(this.audio.duration)
+    getTrackCurrentTime(this.audio.currentTime)
+    getTrackDuration(this.audio.duration)
 
     if (pause) {
       this.audio.play()
@@ -26,7 +26,7 @@ export default class Player extends React.Component {
   }
 
   render() {
-    const { currentTreck } = this.props
+    const { currentTrack } = this.props
 
     return (
       <audio
@@ -35,7 +35,7 @@ export default class Player extends React.Component {
         }}
         autoPlay
         preload="auto"
-        src={currentTreck.url}
+        src={currentTrack.url}
       />
     )
   }

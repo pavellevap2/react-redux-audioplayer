@@ -2,29 +2,29 @@ import * as R from 'ramda'
 import { connect } from 'react-redux'
 import { PlayerPanel } from '../components'
 import {
-  selectNextTreck,
   selectPause,
-  selectPrevTreck,
   changeVolume,
   selectTime,
+  selectNextTrack,
+  selectPrevTrack,
 } from '../actions'
 import {
   getPause,
   getVolume,
-  getTreckDuration,
-  getTreckCurrentTime,
+  getTrackDuration,
+  getTrackCurrentTime,
 } from '../selectors'
 
 const mapStateToProps = R.applySpec({
   pause: getPause,
   volume: getVolume,
-  duration: getTreckDuration,
-  currentTime: getTreckCurrentTime,
+  duration: getTrackDuration,
+  currentTime: getTrackCurrentTime,
 })
 
 const mapDispatchToProps = {
-  selectNextTreck,
-  selectPrevTreck,
+  selectNextTrack,
+  selectPrevTrack,
   selectPause,
   changeVolume,
   selectTime,
